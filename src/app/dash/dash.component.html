@@ -1,0 +1,98 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{(cards | async)?.colums}}" rowHeight="200px">
+    <!--MiniCard -->
+    <mat-grid-tile *ngFor="let c of miniCardData" 
+              [colspan]="(cards | async)?.miniCard?.cols" 
+                [rowspan]="(cards | async)?.miniCard?.rows">
+                
+        <!-- <app-card title = "Car {{c}}">
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card> -->
+      
+      <!-- <app-mini-card 
+      [title] = "c.title" 
+      [taxt] = "text"
+      [value] = "value"
+      [color] = "color"
+      [icon] = "c.icon"
+      ></app-mini-card> -->
+
+    </mat-grid-tile>
+<!--Charts-->
+    <mat-grid-tile *ngFor="let c of [5,6]" 
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "Car {{c}}">
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+    <!--Table-->
+    <mat-grid-tile 
+              [colspan]="(cards | async)?.table?.cols" 
+                [rowspan]="(cards | async)?.table?.rows">   
+        <app-card title = "Car 7">
+          <app-annual-sales-lchart></app-annual-sales-lchart>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "Card Line Chart">
+          <app-orders-table></app-orders-table>
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "Card Bar Chart">
+          <app-store-sessions-bchart></app-store-sessions-bchart>
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "Card Pie Chart">
+          <app-sale-trafic-pchart></app-sale-trafic-pchart>
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "Card Radar Chart">
+          <app-product-sales-rchart></app-product-sales-rchart>
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "Card Radar Chart">
+          <app-doughnut-chart></app-doughnut-chart>
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+              [colspan]="(cards | async)?.chart?.cols" 
+                [rowspan]="(cards | async)?.chart?.rows">   
+        <app-card title = "My table">
+          <app-persons-table></app-persons-table>
+        <p>My-Content</p>
+        <h2>Other info</h2>
+      </app-card>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+</div>
